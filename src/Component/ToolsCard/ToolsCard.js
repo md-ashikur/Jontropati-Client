@@ -6,10 +6,14 @@ const ToolsCard = () => {
             <div class="card card-compact w-96 bg-base-100 shadow-xl">
                 <figure><img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes" /></figure>
                 <div class="card-body">
-                    <h2 class="card-title">Shoes!</h2>
+                    <h2 class="card-title">Shoes</h2>
                     <p>If a dog chews shoes whose shoes does he choose?</p>
-                    <div class="card-actions justify-end">
-                        <button class="btn btn-primary">Buy Now</button>
+                    <b>Minimum order quantity : </b>
+                    <b>Available quantity : </b>
+                    <b>Price : </b>
+                    
+                    <div class="card-actions justify-center">
+                        <button class="btn btn-primary w-4/5">Buy Now</button>
                     </div>
                 </div>
             </div>
