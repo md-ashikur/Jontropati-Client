@@ -6,6 +6,7 @@ import Dashboard from './Component/Dashboard/Dashboard';
 import Footer from './Component/Footer/Footer';
 import Header from './Component/Header/Header';
 import Home from './Component/Home/Home';
+import NotFound from './Component/NotFound/NotFound';
 import Portfolio from './Component/Portfolio/Portfolio';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route path="/portfolio" element={<Portfolio/>} />
         <Route path="/blog" element={<Blog/>} />
         <Route path="/dashboard" element={<Dashboard/>} />
+        <Route path="/*" element={<NotFound/>} />
       </Routes>
       <Footer></Footer>
     </div>
