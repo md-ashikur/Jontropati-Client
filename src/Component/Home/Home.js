@@ -2,6 +2,7 @@ import React from 'react';
 import ToolsCard from '../ToolsCard/ToolsCard';
 import Business from './Business/Business';
 import Carousel from './Carousel/Carousel';
+import Review from './Review/Review';
 
 
 const Home = () => {
@@ -13,7 +14,9 @@ const Home = () => {
                 <ToolsCard></ToolsCard>
                 <Business></Business>
             </div>
-
+            {/* Reviews=============================== */}
+            
+            <Review></Review>
             {/* news-letter==================== */}
             <div className="my-20 text-center">
                 <h2 className="text-4xl font-semibold text-accent ">Sign Up For Newsletters</h2>
@@ -27,6 +30,8 @@ const Home = () => {
                     </label>
                 </div>
             </div>
+
+            
         </div>
     );
 };

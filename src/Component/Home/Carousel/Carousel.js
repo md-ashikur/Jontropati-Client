@@ -3,7 +3,7 @@ import React from 'react';
 const Carousel = () => {
     return (
         
-            <div class="carousel h-screen w-full">
+            <div class="carousel h-screen w-full" >
                 <div id="slide1" class="carousel-item relative w-full">
                     <img src="https://images.unsplash.com/photo-1534398079543-7ae6d016b86a?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870" class="w-full" />
                     <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">

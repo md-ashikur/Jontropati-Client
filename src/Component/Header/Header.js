@@ -12,17 +12,19 @@ const Header = () => {
                     <ul tabindex="0" className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                     <li><Link to='home'>Home</Link></li>
                     <li><Link to='portfolio'>My Portfolio</Link></li>
+                    <li><Link to='blog'>Blog</Link></li>
                     <li tabindex="0">
                         <a>
-                            Parent
+                        Dashboard
                             <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" /></svg>
                         </a>
-                        <ul className="p-2">
-                            <li><a>Submenu 1</a></li>
-                            <li><a>Submenu 2</a></li>
+                        <ul className="p-2 bg-white">
+                            <li><a>My Orders</a></li>
+                            <li><a>Add A Review</a></li>
+                            <li><a>My Profile</a></li>
                         </ul>
                     </li>
-                    <li><Link to='blog'>Blog</Link></li>
+                   
                     </ul>
                 </div>
                 <div>
@@ -33,17 +35,19 @@ const Header = () => {
                 <ul className="menu menu-horizontal p-0">
                     <li><Link to='home'>Home</Link></li>
                     <li><Link to='portfolio'>My Portfolio</Link></li>
+                    <li><Link to='blog'>Blog</Link></li>
                     <li tabindex="0">
-                        <Link to=''>
+                        <Link to='dashboard'>
                         Dashboard
                             <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" /></svg>
                         </Link>
-                        <ul className="p-2">
-                            <li><a>Submenu 1</a></li>
-                            <li><a>Submenu 2</a></li>
+                        <ul className="p-2 bg-white">
+                            <li><a>My Orders</a></li>
+                            <li><a>Add A Review</a></li>
+                            <li><a>My Profile</a></li>
                         </ul>
                     </li>
-                    <li><Link to='blog'>Blog</Link></li>
+                   
                 </ul>
             </div>
             <div className="navbar-end">
