@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const ToolsCard = () => {
     return (
@@ -13,7 +14,7 @@ const ToolsCard = () => {
                     <b>Price : </b>
                     
                     <div class="card-actions justify-center">
-                        <button class="btn btn-primary w-4/5">Buy Now</button>
+                        <Link to="/purchase"><button class="btn btn-primary px-20 text-white font-bold">Purchase</button></Link>
                     </div>
                 </div>
             </div>

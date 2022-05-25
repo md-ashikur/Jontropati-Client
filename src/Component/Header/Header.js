@@ -1,30 +1,44 @@
+import { signOut } from 'firebase/auth';
 import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
+import auth from '../../firebase.init';
 
 const Header = () => {
+    const [user] = useAuthState(auth);
+    const handleSignOut = () => {
+        signOut(auth);
+    }
+    console.log(user)
     return (
-        <div className="navbar bg-base-100 fixed top-0  z-10">
+        <div className="navbar bg-base-100 fixed top-0  z-40">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabindex="0" className="btn btn-ghost lg:hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                     </label>
                     <ul tabindex="0" className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
-                    <li><Link to='home'>Home</Link></li>
-                    <li><Link to='portfolio'>My Portfolio</Link></li>
-                    <li><Link to='blog'>Blog</Link></li>
-                    <li tabindex="0">
-                        <a>
-                        Dashboard
-                            <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" /></svg>
-                        </a>
-                        <ul className="p-2 bg-white">
-                            <li><a>My Orders</a></li>
-                            <li><a>Add A Review</a></li>
-                            <li><a>My Profile</a></li>
-                        </ul>
-                    </li>
-                   
+                        <li><Link to='home'>Home</Link></li>
+                        <li><Link to='portfolio'>My Portfolio</Link></li>
+                        <li><Link to='blog'>Blog</Link></li>
+                        <li tabindex="0">
+                        {user ?
+                            <div >
+                                <Link to='dashboard'>
+                                    Dashboard
+                                   
+                                </Link>
+                               
+                            </div>
+
+                            :
+                            <div>
+                            </div>
+
+                        }
+
+                        </li>
+
                     </ul>
                 </div>
                 <div>
@@ -37,17 +51,23 @@ const Header = () => {
                     <li><Link to='portfolio'>My Portfolio</Link></li>
                     <li><Link to='blog'>Blog</Link></li>
                     <li tabindex="0">
-                        <Link to='dashboard'>
-                        Dashboard
-                            <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" /></svg>
-                        </Link>
-                        <ul className="p-2 bg-white">
-                            <li><a>My Orders</a></li>
-                            <li><a>Add A Review</a></li>
-                            <li><a>My Profile</a></li>
-                        </ul>
+                        {user ?
+                            <div >
+                                <Link to='dashboard'>
+                                    Dashboard
+                                   
+                                </Link>
+                               
+                            </div>
+
+                            :
+                            <div>
+                            </div>
+
+                        }
+
                     </li>
-                   
+
                 </ul>
             </div>
             <div className="navbar-end">
@@ -83,11 +103,24 @@ const Header = () => {
                                 </Link>
                             </li>
                             <li><Link to=''>Settings</Link></li>
-                            <li><Link to=''>Logout</Link></li>
+                            <li>
+                                {user ?
+                                    <div >
+                                        <button className='signOut' onClick={handleSignOut}>Sign out</button>
+                                    </div>
+
+                                    :
+                                    <div>
+                                        <Link to='login'>Login</Link></div>
+
+                                }
+                            </li>
+
                         </ul>
                     </div>
                 </div>
             </div>
+
         </div>
     );
 };
