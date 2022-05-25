@@ -69,15 +69,15 @@ const Business = () => {
             counter end=
             ===================== */}
 
-            <div class="card bg-base-100 drop-shadow-[0_5px_5px_#65c3c88f] w-4/5 mx-auto">
+            <div className="card bg-base-100 drop-shadow-[0_5px_5px_#65c3c88f] w-4/5 mx-auto">
 
-                <div class=" block lg:flex py-10 px-10 justify-between">
+                <div className=" block lg:flex py-10 px-10 justify-between">
                     <div>
-                        <h2 class="card-title text-primary text-xl font-bold">Have any question about us or get a product request?</h2>
+                        <h2 className="card-title text-primary text-xl font-bold">Have any question about us or get a product request?</h2>
                         <p className="lg:text-left">Don't hesitate to contact us</p>
                     </div>
-                    <div class="card-actions py-5 justify-center lg:py-0 ">
-                        <button class="btn btn-primary rounded-lg text-white">Contacct Us</button>
+                    <div className="card-actions py-5 justify-center lg:py-0 ">
+                        <button className="btn btn-primary rounded-lg text-white">Contacct Us</button>
                     </div>
                 </div>
             </div>

@@ -41,7 +41,7 @@ const Review = () => {
   keyBoardControl={true}
   customTransition="all .5"
   transitionDuration={500}
-  dotListClass="custom-dot-list-style"
+  dotListclassName="custom-dot-list-style"
   
        >
 

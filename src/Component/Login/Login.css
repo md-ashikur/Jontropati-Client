@@ -13,9 +13,7 @@
     border-radius: 5px;
     border: none;
     outline: none;
-    background-color: #0AAC76;
-    color: white;
-    font-weight: 600;
+    
 }
 
 .submit-btn:hover {

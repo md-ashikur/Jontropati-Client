@@ -5,21 +5,21 @@ import ashik from "../../Images/ashik.jpg";
 const Portfolio = () => {
     return (
         <div className="mt-20 mb-5">
-            <div class="hero min-h-screen bg-base-200">
-                <div class="hero-content flex-col p-0 my-3 lg:flex-row">
-                    <div class="card w-96 bg-base-100 shadow-xl">
-                        <figure class="px-10 pt-10">
-                            <div class="avatar online">
-                                <div class="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+            <div className="hero min-h-screen bg-base-200">
+                <div className="hero-content flex-col p-0 my-3 lg:flex-row">
+                    <div className="card w-96 bg-base-100 shadow-xl">
+                        <figure className="px-10 pt-10">
+                            <div className="avatar online">
+                                <div className="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
                                     <img src={ashik} />
                                 </div>
                             </div>
                         </figure>
 
 
-                        <div class="card-body">
+                        <div className="card-body">
 
-                            <h2 class="card-title justify-center">MD. ASHIKUR RAHMAN</h2>
+                            <h2 className="card-title justify-center">MD. ASHIKUR RAHMAN</h2>
                             <p className="text-xs text-center">Jr. Web Developer. specialized in React.js</p>
 
 
@@ -58,8 +58,8 @@ const Portfolio = () => {
 
 
                     <div className="bg-base-100 relative top-0 card py-20 px-10 lg:mt-[-100px]">
-                        <h1 class="text-5xl font-bold">About Me</h1>
-                        <p class="py-6">I am Md Ashikur Rahman. Jr. Web developer & Graphic designer 24/7 supportive. I provide the best innovative design ideas to clients.<br/>
+                        <h1 className="text-5xl font-bold">About Me</h1>
+                        <p className="py-6">I am Md Ashikur Rahman. Jr. Web developer & Graphic designer 24/7 supportive. I provide the best innovative design ideas to clients.<br/>
 
                             I make professional clean look websites using HTML5, CSS3, Bootstrap, tailwind, Javascript, React, or using WordPress/Wix.<br/>
 
@@ -67,7 +67,7 @@ const Portfolio = () => {
 
                             You can message me so we can talk about your project. Whatever option you like. Looking forward to working with you soon.</p>
                             
-                            <h1 class="text-3xl font-bold my-4">Live Websites</h1>
+                            <h1 className="text-3xl font-bold my-4">Live Websites</h1>
                            
                            <div className="flex flex-col lg:flex-row justify-evenly gap-5">
                            <a href="https://max-warehouse-6c399.firebaseapp.com/home"><button className="border-double outline outline-offset-2 outline-cyan-500 py-2 px-5 rounded-btn font-bold hover:bg-primary hover:text-white  ">MAX WAREHOUSE</button></a>

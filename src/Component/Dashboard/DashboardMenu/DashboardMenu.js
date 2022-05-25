@@ -16,7 +16,7 @@ const DashboardMenu = () => {
 
                     <label for="my-drawer-2" class="drawer-overlay"></label>
                     <ul class="menu p-4 overflow-y-auto w-80 bg-base-100 text-base-content">
-                        <h5 className="text-2xl font-bold text-primary my-3">Menu</h5> <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
+                        <h5 className="text-2xl font-bold text-primary my-3">Menu</h5>
                         {/* <!-- Sidebar content here --> */}
                         <li ><Link to="/myProfile">My Profile</Link></li>
                         <li><Link to="/myOrders">My Orders</Link></li>
@@ -30,6 +30,9 @@ const DashboardMenu = () => {
 
                 </div>
             </div>
+
+
+            
         </div>
     );
 };

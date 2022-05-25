@@ -1,83 +1,138 @@
+
 import React, { useState } from 'react';
-import { useCreateUserWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useSignInWithGoogle, useUpdateProfile } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import Loading from '../Loading/Loading';
+import { useForm } from "react-hook-form";
 
 const Signup = () => {
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [confirm, setConfirm] = useState('');
-    const [error, setError] = useState('');
-    const navigate = useNavigate();
 
+    const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
+    const { register, formState: { errors }, handleSubmit } = useForm();
     const [
         createUserWithEmailAndPassword,
         user,
         loading,
-        
+        error,
     ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
-    const [signInWithGoogle, user1, loading1, ] = useSignInWithGoogle(auth);
 
+    const [updateProfile, updating, updateError] = useUpdateProfile(auth);
 
+    const navigate = useNavigate();
 
+    let signInError;
 
-    if (loading || loading1) {
-        <Loading></Loading>
+    if (loading || gLoading || updating) {
+        return <Loading></Loading>
     }
 
-    if (user || user1) {
+    if (error || gError || updateError) {
+        signInError = <p className='text-red-500'><small>{error?.message || gError?.message || updateError?.message}</small></p>
+    }
+
+    if (user || gUser) {
+        console.log(user || gUser);
+    }
+
+    const onSubmit = async data => {
+        console.log(data)
+        await createUserWithEmailAndPassword(data.email, data.password);
+        await updateProfile({ displayName: data.name });
         navigate('/');
+
     }
 
-    const handleSignUp = event => {
-        event.preventDefault();
-        if (password !== confirm) {
-            setError('Your two passwords did not match');
-            return;
-        }
-        if (password.length < 6) {
-            setError('Password must be 6 characters or longer');
-            return;
-        }
-    }
+
+
     return (
-        <div className="my-20 flex justify-center ">
-            <div class="card w-96 bg-base-100 shadow-xl my-10">
-                <div class="card-body text-center">
-                    <h2 class="card-title justify-center">SIGN UP</h2>
-                    <form onSubmit={handleSignUp} className="flex flex-col my-3">
-                    <input onBlur={(e) => setName(e.target.value)} type="text" name='name' className="form-input my-2" placeholder="Enter Full Name" required />
+
+         <div className='my-10  flex h-screen justify-center items-center'>
+                <div className="card w-96 bg-base-100 shadow-xl">
+                    <div className="card-body text-center">
+                        <h2 className="text-center text-2xl font-bold text-primary">Sign Up</h2>
+                        <form onSubmit={handleSubmit(onSubmit)}>
+
+                            <div className="form-control w-full max-w-xs">
+
+                                <input
+                                    type="text"
+                                    placeholder="Enter Full Name"
+                                    className="input input-bordered w-full max-w-xs rounded-lg"
+                                    {...register("name", {
+                                        required: {
+                                            value: true,
+                                            message: 'Name is Required'
+                                        }
+                                    })}
+                                />
+                                <label className="label">
+                                    {errors.name?.type === 'required' && <span className="label-text-alt text-red-500">{errors.name.message}</span>}
+                                </label>
+                            </div>
+
+                            <div className="form-control w-full max-w-xs">
+
+                                <input
+                                    type="email"
+                                    placeholder="Enter Email"
+                                    className="input input-bordered w-full max-w-xs rounded-lg"
+                                    {...register("email", {
+                                        required: {
+                                            value: true,
+                                            message: 'Email is Required'
+                                        },
+                                        pattern: {
+                                            value: /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/,
+                                            message: 'Provide a valid Email'
+                                        }
+                                    })}
+                                />
+                                <label className="label">
+                                    {errors.email?.type === 'required' && <span className="label-text-alt text-red-500">{errors.email.message}</span>}
+                                    {errors.email?.type === 'pattern' && <span className="label-text-alt text-red-500">{errors.email.message}</span>}
+                                </label>
+                            </div>
 
 
-                    <input onBlur={(e) => setEmail(e.target.value)} type="email" name='email' className="form-input" placeholder="email" required />
+                            <div className="form-control w-full max-w-xs">
+
+                                <input
+                                    type="password"
+                                    placeholder="Password"
+                                    className="input input-bordered w-full max-w-xs rounded-lg"
+                                    {...register("password", {
+                                        required: {
+                                            value: true,
+                                            message: 'Password is Required'
+                                        },
+                                        minLength: {
+                                            value: 6,
+                                            message: 'Must be 6 characters or longer'
+                                        }
+                                    })}
+                                />
+                                <label className="label">
+                                    {errors.password?.type === 'required' && <span className="label-text-alt text-red-500">{errors.password.message}</span>}
+                                    {errors.password?.type === 'minLength' && <span className="label-text-alt text-red-500">{errors.password.message}</span>}
+                                </label>
+                            </div>
 
 
-                    <input onBlur={(e) => setPassword(e.target.value)} type="password" name="password" placeholder="password" className="form-input my-2" />
-
-
-                    <input onBlur={(e) => setConfirm(e.target.value)} type="password" name="confirm-password" placeholder="confirm password" className="form-input mb-2" />
-                    <p style={{ color: 'red' }}>{error}</p>
-
-                    <input onClick={() => createUserWithEmailAndPassword(email, password, name)} type="submit" value="Sign Up" className='btn submit-btn mx-auto py-2 mt-2' />
-                </form>
-
-                <p>Already have an account? <Link to="/login" className='font-bold text-[#0a7551]'>Login</Link></p>
-
-                <div class="divider px-10">OR</div>
-
-                {/* ==============
-           other login option
-           ===============================  */}
-                <div className="">
-                    <button onClick={() => signInWithGoogle()} type="submit" class="btn btn-outline btn-black rounded-lg hover:bg-primary hover:text-white">Continue with Google</button>
+                            {signInError}
+                            <input className='btn w-full text-white border-none rounded-lg bg-primary hover:bg-secondary' type="submit" value="Sign Up" />
+                        </form>
+                        <p>Already have an account? <Link to="/login" className='font-bold text-primary'>Login</Link></p>
+                        
+                        <div className="divider">OR</div>
+                        <button
+                            onClick={() => signInWithGoogle()}
+                            className="btn btn-outline rounded-lg hover:bg-secondary hover:border-none"
+                        >Continue with Google</button>
+                    </div>
                 </div>
-                </div>
-            </div>
-           
-           
-        </div>
+            </div >
+
     );
 };
 
