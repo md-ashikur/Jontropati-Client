@@ -40,10 +40,6 @@ const Login = () => {
     }
 
 
-
-
-
-
     return (
         <div className='my-10  flex h-screen justify-center items-center'>
             <div className="card w-96 bg-base-100 shadow-xl">
@@ -104,14 +100,19 @@ const Login = () => {
                         <input className='btn w-full text-white border-none rounded-lg bg-primary hover:bg-secondary' type="submit" value="login" />
                     </form>
                     <p>Don't have any account? <Link to="/signup" className='font-bold text-primary'>Sign Up</Link></p>
-                    <p> <Link to="/login" className='text-primary'>Forget Password?</Link></p>
-                    <div className="divider">OR</div>
-                    <button
-                        onClick={() => signInWithGoogle()}
-                        className="btn btn-outline rounded-lg hover:bg-secondary hover:border-none"
-                    >Continue with Google</button>
-                </div>
+
+                    {/* forget password=============== */}
+                    <p> <Link to="/forgetPass" className='text-primary'>Forget Password?</Link></p>
+                   
+
+                {/* ================================= */}
+                <div className="divider">OR</div>
+                <button
+                    onClick={() => signInWithGoogle()}
+                    className="btn btn-outline rounded-lg hover:bg-secondary hover:border-none"
+                >Continue with Google</button>
             </div>
+        </div>
         </div >
     );
 };

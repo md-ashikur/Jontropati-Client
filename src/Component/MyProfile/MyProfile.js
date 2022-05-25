@@ -1,7 +1,11 @@
 import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
 import DashboardMenu from '../Dashboard/DashboardMenu/DashboardMenu';
 
 const MyProfile = () => {
+    const [user] = useAuthState(auth);
+
     return (
         <div className="mt-20 container mx-auto  lg:flex">
             <DashboardMenu></DashboardMenu>
@@ -10,8 +14,8 @@ const MyProfile = () => {
                 <div className="hero-content flex-col lg:flex-row-reverse">
 
                     <div>
-                        <h1 className="text-5xl font-bold">Box Office News!</h1>
-                        <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                        <h1 className="text-5xl font-bold">{user?.displayName}</h1>
+                        <p className="py-6">{user?.email}</p>
                         <button className="btn btn-primary">Get Started</button>
                     </div>
                 </div>

@@ -17,6 +17,7 @@ import NotFound from './Component/NotFound/NotFound';
 import Portfolio from './Component/Portfolio/Portfolio';
 import Purchase from './Component/Purchase/Purchase';
 import RequireAuth from './Component/RequireAuth/RequireAuth';
+import ForgetPass from './Component/Signup/ForgetPass';
 import Signup from './Component/Signup/Signup';
 
 function App() {
@@ -30,16 +31,18 @@ function App() {
         <Route path="/blog" element={<Blog/>} />
         <Route path="/dashboard" element={<Dashboard/>} />
         
-        <Route path="/myProfile" element={<MyProfile/>} />
-        <Route path="/myOrders" element={<MyOrders/>} />
-        <Route path="/addReview" element={<AddReview/>} />
-        <Route path="/manageOrder" element={<ManageOrders/>} />
-        <Route path="/addProduct" element={<AddProduct/>} />
-        <Route path="/manageProduct" element={<ManageProduct/>} />
+        <Route path="/myProfile" element={<RequireAuth><MyProfile/></RequireAuth>} />
+        <Route path="/myOrders" element={<RequireAuth><MyOrders/></RequireAuth>} />
+
+        <Route path="/addReview" element={<RequireAuth><AddReview/></RequireAuth>} />
+        <Route path="/manageOrder" element={<RequireAuth><ManageOrders/></RequireAuth>} />
+        <Route path="/addProduct" element={<RequireAuth><AddProduct/></RequireAuth>} />
+        <Route path="/manageProduct" element={<RequireAuth><ManageProduct/></RequireAuth>} />
 
 
         <Route path="/login" element={<Login/>} />
         <Route path="/signup" element={<Signup/>} />
+        <Route path="/forgetPass" element={<ForgetPass/>} />
 
         <Route path="/purchase" element={
         <RequireAuth><Purchase/></RequireAuth>} />
