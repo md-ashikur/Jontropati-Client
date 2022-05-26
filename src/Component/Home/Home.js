@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import ToolCards from '../ToolsCard/ToolCards';
 
 import ToolsCard from '../ToolsCard/ToolsCard';
 import Business from './Business/Business';
@@ -6,13 +7,29 @@ import Carousel from './Carousel/Carousel';
 import Review from './Review/Review';
 
 
-const Home = () => {
+const Home = ({item}) => {
+    const [ items, setItems] = useState([]);
+    
+    useEffect( ()=>{
+        fetch('http://localhost:5000/item')
+        .then(res => res.json())
+        .then(data => setItems(data));
+    }, [])
+
     return (
         <div>
 
             <Carousel></Carousel>
             <div className='container mx-auto'>
-                <ToolsCard></ToolsCard>
+           <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-4 my-20">
+           {
+                items.slice(0, 3).map(item => <ToolsCard
+                    key={item._id}
+                    item={item}
+                >
+                </ToolsCard>)
+            }
+           </div>
                 <Business></Business>
             </div>
             {/* Reviews=============================== */}

@@ -1,0 +1,63 @@
+[
+    {
+    
+      "img": "https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8aGFtbWVyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500",
+      "name": "Hammer",
+      "description": "A hammer is a tool, most often a hand tool, consisting of a weighted head fixed to a long handle that is swung to deliver an impact to a small area of an object..\r\n",
+      "minQuantity": "8",
+      "availableQuantity": "20",
+      "price": "$25"
+      
+    },
+    {
+    
+      "img": "https://images.unsplash.com/photo-1616321507403-9db926c914fd?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fGRyaWxsJTIwbWFjaGluZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500",
+      "name": "Drill machine",
+      "description": "A drill machine is a tool, most often a hand tool, consisting of a weighted head fixed to a long handle that is swung to deliver an impact to a small area of an object..\r\n",
+      "minQuantity": "9",
+      "availableQuantity": "200",
+      "price": "$50"
+      
+    },
+    {
+    
+      "img": "https://images.unsplash.com/photo-1524224313114-ebd9c49dde82?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870",
+      "name": "Screwdriver",
+      "description": "A screwdriver is a tool, most often a hand tool, consisting of a weighted head fixed to a long handle that is swung to deliver an impact to a small area of an object..\r\n",
+      "minQuantity": "20",
+      "availableQuantity": "150",
+      "price": "$15"
+      
+    },
+    {
+    
+      "img": "https://images.unsplash.com/photo-1559715543-8f98c9898322?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8cGxpZXJzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500",
+      "name": "Pliers",
+      "description": "A Pliers is a tool, most often a hand tool, consisting of a weighted head fixed to a long handle that is swung to deliver an impact to a small area of an object..\r\n",
+      "minQuantity": "5",
+      "availableQuantity": "100",
+      "price": "$35"
+      
+    },
+    {
+    
+      "img": "https://images.unsplash.com/photo-1559647746-9b2f216d2dc3?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8bWVhc3VyaW5nJTIwdGFwZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500",
+      "name": "Measuring Tape",
+      "description": "A Measuring Tape is a tool, most often a hand tool, consisting of a weighted head fixed to a long handle that is swung to deliver an impact to a small area of an object..\r\n",
+      "minQuantity": "10",
+      "availableQuantity": "50",
+      "price": "$20"
+      
+    },
+    {
+    
+      "img": "https://images.unsplash.com/photo-1593616307659-07f02b400e14?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=773",
+      "name": "Soldering Iron",
+      "description": "A Soldering Iron is a tool, most often a hand tool, consisting of a weighted head fixed to a long handle that is swung to deliver an impact to a small area of an object..\r\n",
+      "minQuantity": "10",
+      "availableQuantity": "30",
+      "price": "$60"
+      
+    }
+   
+  ]
