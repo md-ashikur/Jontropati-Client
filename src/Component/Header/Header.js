@@ -22,20 +22,20 @@ const Header = () => {
                         <li><Link to='portfolio'>My Portfolio</Link></li>
                         <li><Link to='blog'>Blog</Link></li>
                         <li tabIndex="0">
-                        {user ?
-                            <div >
-                                <Link to='dashboard'>
-                                    Dashboard
-                                   
-                                </Link>
-                               
-                            </div>
+                            {user ?
+                                <div >
+                                    <Link to='dashboard'>
+                                        Dashboard
 
-                            :
-                            <div>
-                            </div>
+                                    </Link>
 
-                        }
+                                </div>
+
+                                :
+                                <div>
+                                </div>
+
+                            }
 
                         </li>
 
@@ -51,21 +51,7 @@ const Header = () => {
                     <li><Link to='portfolio'>My Portfolio</Link></li>
                     <li><Link to='blog'>Blog</Link></li>
                     <li tabIndex="0">
-                        {user ?
-                            <div >
-                                <Link to='dashboard'>
-                                    Dashboard
-                                   
-                                </Link>
-                               
-                            </div>
-
-                            :
-                            <div>
-                            </div>
-
-                        }
-
+                        {user && <Link to='dashboard'> Dashboard</Link>}
                     </li>
 
                 </ul>
@@ -98,11 +84,11 @@ const Header = () => {
                         <ul tabIndex="0" className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                             <li>
                                 <Link to='' className="justify-between bg-secondary text-white">
-                                    
+
                                     {user?.displayName}
                                 </Link>
                             </li>
-                            <li><Link to='/myProfile'>Profile</Link></li>
+                            <li><Link to='/dashboard'>Profile</Link></li>
                             <li>
                                 {user ?
                                     <div >

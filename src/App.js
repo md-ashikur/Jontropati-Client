@@ -26,25 +26,32 @@ function App() {
 <Header></Header>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/portfolio" element={<Portfolio/>} />
-        <Route path="/blog" element={<Blog/>} />
-        <Route path="/dashboard" element={<Dashboard/>} />
+        <Route path="home" element={<Home />} />
+        <Route path="portfolio" element={<Portfolio/>} />
+        <Route path="blog" element={<Blog/>} />
+
+        {/* ========dashboard======= */}
+        <Route path="dashboard" 
+        element={<RequireAuth><Dashboard/></RequireAuth>}>
+
+        <Route index  element={<RequireAuth><MyProfile/></RequireAuth>} ></Route>
+        <Route path="myOrders" element={<RequireAuth><MyOrders/></RequireAuth>} ></Route>
+
+        <Route path="addReview" element={<RequireAuth><AddReview/></RequireAuth>} ></Route>
+        <Route path="manageOrder" element={<RequireAuth><ManageOrders/></RequireAuth>} ></Route>
+        <Route path="addProduct" element={<RequireAuth><AddProduct/></RequireAuth>} ></Route>
+        <Route path="manageProduct" element={<RequireAuth><ManageProduct/></RequireAuth>} ></Route>
+
+        </Route>
         
-        <Route path="/myProfile" element={<RequireAuth><MyProfile/></RequireAuth>} />
-        <Route path="/myOrders" element={<RequireAuth><MyOrders/></RequireAuth>} />
-
-        <Route path="/addReview" element={<RequireAuth><AddReview/></RequireAuth>} />
-        <Route path="/manageOrder" element={<RequireAuth><ManageOrders/></RequireAuth>} />
-        <Route path="/addProduct" element={<RequireAuth><AddProduct/></RequireAuth>} />
-        <Route path="/manageProduct" element={<RequireAuth><ManageProduct/></RequireAuth>} />
+       
 
 
-        <Route path="/login" element={<Login/>} />
-        <Route path="/signup" element={<Signup/>} />
-        <Route path="/forgetPass" element={<ForgetPass/>} />
+        <Route path="login" element={<Login/>} />
+        <Route path="signup" element={<Signup/>} />
+        <Route path="forgetPass" element={<ForgetPass/>} />
 
-        <Route path="/purchase" element={
+        <Route path="purchase" element={
         <RequireAuth><Purchase/></RequireAuth>} />
 
         <Route path="/*" element={<NotFound/>} />

@@ -1,10 +1,10 @@
 import React from 'react';
-import DashboardMenu from '../Dashboard/DashboardMenu/DashboardMenu';
+
 
 const ManageOrders = () => {
     return (
         <div className="mt-20 container mx-auto  lg:flex">
-        <DashboardMenu></DashboardMenu>
+      
 
         <div className="hero min-h-screen bg-base-200">
             <div className="hero-content flex-col lg:flex-row-reverse">
