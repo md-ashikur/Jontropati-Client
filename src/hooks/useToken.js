@@ -16,14 +16,14 @@ const useToken = user => {
                 },
                 body: JSON.stringify(currentUser)
             })
-            .then(res=> res.json())
-            .then(data => {
-                console.log('data insdie token', data);
-                const accessToken = data.token;
-localStorage.setItem('accessToken', accessToken);
+                .then(res => res.json())
+                .then(data => {
+                    console.log('data insdie token', data);
+                    const accessToken = data.token;
+                    localStorage.setItem('accessToken', accessToken);
 
-                setToken(accessToken)
-            })
+                    setToken(accessToken)
+                })
         }
 
 

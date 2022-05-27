@@ -9,6 +9,7 @@ import Footer from './Component/Footer/Footer';
 import Header from './Component/Header/Header';
 import Home from './Component/Home/Home';
 import Login from './Component/Login/Login';
+import MakeAdmin from './Component/MakeAdmin/MakeAdmin';
 import ManageOrders from './Component/ManageOrders/ManageOrders';
 import ManageProduct from './Component/Mproduct/ManageProduct';
 import MyOrders from './Component/MyOrders/MyOrders';
@@ -41,6 +42,7 @@ function App() {
         <Route path="manageOrder" element={<RequireAuth><ManageOrders/></RequireAuth>} ></Route>
         <Route path="addProduct" element={<RequireAuth><AddProduct/></RequireAuth>} ></Route>
         <Route path="manageProduct" element={<RequireAuth><ManageProduct/></RequireAuth>} ></Route>
+        <Route path="makeAdmin" element={<RequireAuth><MakeAdmin/></RequireAuth>} ></Route>
 
         </Route>
         

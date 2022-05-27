@@ -8,8 +8,9 @@ const Header = () => {
     const [user] = useAuthState(auth);
     const handleSignOut = () => {
         signOut(auth);
+        localStorage.removeItem('accesstoken');
     }
-    console.log(user)
+    
     return (
         <div className="navbar bg-base-100 fixed top-0  z-40">
             <div className="navbar-start">

@@ -19,7 +19,7 @@ const ForgetPass = () => {
         return <p>Sending...</p>;
     }
     return (
-        <div className="my-20 flex justify-center">
+        <div className="my-40 flex justify-center">
 
 
 
@@ -27,14 +27,14 @@ const ForgetPass = () => {
             <input type="checkbox" id="my-modal-6" class="modal-toggle" />
             <div class="modal modal-bottom sm:modal-middle">
                 <div class="modal-box">
-                    <label for="my-modal-6" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+                    <label htmlFor="my-modal-6" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
                     <h3 class="font-bold text-lg">Are you sure you want to reset your password?</h3>
 
-                    <div class="modal-action">
-                        <label for="my-modal-6" class="btn"
+                    <div class="modal-action ">
+                        <label htmlFor="my-modal-6" class="btn"
                             onClick={async () => {
                                 await sendPasswordResetEmail(email);
-                                alert('Sent email');
+                                alert(`Successfully email send`);
                             }}>Send reset Email</label>
                     </div>
                 </div>
@@ -52,7 +52,7 @@ const ForgetPass = () => {
                             placeholder="Enter Email"
                             class="input input-bordered w-full max-w-xs rounded-lg"
                             onChange={(e) => setEmail(e.target.value)} />
-                        <span className="bg-primary"><label for="my-modal-6" class="submit modal-button text-white">Email</label></span>
+                        <span className="bg-primary"><label htmlFor="my-modal-6" class="submit modal-button text-white">Email</label></span>
                     </label>
                 </form>
             </div>
