@@ -4,7 +4,7 @@ import Loading from '../Loading/Loading';
 import UserRow from './UserRow';
 
 const MakeAdmin = () => {
-    const { data:user, isLoading, refetch } = useQuery('MakeAdmin', () => fetch('http://localhost:5000/user', {
+    const { data:user, isLoading, refetch } = useQuery('MakeAdmin', () => fetch('https://secret-wave-92614.herokuapp.com/user', {
         method: 'GET',
         headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`

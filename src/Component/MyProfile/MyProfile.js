@@ -9,7 +9,7 @@ const MyProfile = () => {
     const onSubmit = data =>{ 
         
         console.log(data);
-        const url = `http://localhost:5000/item`;
+        const url = `https://secret-wave-92614.herokuapp.com/profile`;
         fetch(url, {
             method: 'POST',
             headers: {

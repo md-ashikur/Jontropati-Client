@@ -15,9 +15,10 @@ const [admin] = useAdmin(user);
 <div class="drawer drawer-mobile">
   <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
   <div class="drawer-content flex flex-col">
-   <Outlet></Outlet>
-    <label htmlFor="my-drawer-2" class="btn btn-primary drawer-button lg:hidden">Open drawer</label>
+  <label htmlFor="my-drawer-2" class="btn btn-primary drawer-button lg:hidden">Open drawer</label>
   
+   <Outlet></Outlet>
+   
   </div> 
   <div class="drawer-side">
     <label htmlFor="my-drawer-2" class="drawer-overlay"></label> 
