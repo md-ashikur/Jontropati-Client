@@ -11,7 +11,7 @@ const ToolsCard = ({item}) => {
     return (
         <div className='my-10'>
             <div className="card card-compact w-100 bg-base-100 shadow-xl mx-3">
-                <figure><img src={img} alt="Shoes" /></figure>
+                <figure className='h-{200px}'><img src={img} alt="Shoes" className='h-80' /></figure>
                 <div className="card-body">
                     <h2 className="card-title">{name}</h2>
                     <p>{description}</p>

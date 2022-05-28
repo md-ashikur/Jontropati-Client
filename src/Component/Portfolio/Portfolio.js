@@ -11,7 +11,7 @@ const Portfolio = () => {
                         <figure className="px-10 pt-10">
                             <div className="avatar online">
                                 <div className="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                                    <img src={ashik} />
+                                    <img src={ashik} alt=""/>
                                 </div>
                             </div>
                         </figure>
