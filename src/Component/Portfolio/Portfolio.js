@@ -46,10 +46,6 @@ const Portfolio = () => {
                                 </div>
                                 <hr />
 
-                                <div className="my-5 ">
-                                    <h4 className="font-bold text-primary mb-2 ">Skills</h4>
-
-                                </div>
 
                             </div>
 
@@ -59,13 +55,13 @@ const Portfolio = () => {
 
                     <div className="bg-base-100 relative top-0 card py-20 px-10 lg:mt-[-100px]">
                         <h1 className="text-5xl font-bold">About Me</h1>
-                        <p className="py-6">I am Md Ashikur Rahman. Jr. Web developer & Graphic designer 24/7 supportive. I provide the best innovative design ideas to clients.<br/>
+                        <p className="py-6">I am Md Ashikur Rahman. Jr. Web developer.<br/>
 
-                            I make professional clean look websites using HTML5, CSS3, Bootstrap, tailwind, Javascript, React, or using WordPress/Wix.<br/>
+                        Skills I have as a web developer - HTML5, CSS3, Bootstrap, tailwind, Javascript, React.js, Express.js, daysi UI.<br/>
 
-                            I also make Logos, magazines, stationery, and vector portrait.<br/>
+                          <br/>
 
-                            You can message me so we can talk about your project. Whatever option you like. Looking forward to working with you soon.</p>
+                           </p>
                             
                             <h1 className="text-3xl font-bold my-4">Live Websites</h1>
                            

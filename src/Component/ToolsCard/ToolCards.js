@@ -5,7 +5,7 @@ const ToolCards = ({item}) => {
     const [ items, setItems] = useState([]);
 
     useEffect( ()=>{
-        fetch('https://secret-wave-92614.herokuapp.com/item')
+        fetch('http://localhost:5000/item')
         .then(res => res.json())
         .then(data => setItems(data));
     }, [])
