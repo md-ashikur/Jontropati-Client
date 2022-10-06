@@ -20,6 +20,9 @@ import Purchase from './Component/Purchase/Purchase';
 import RequireAuth from './Component/RequireAuth/RequireAuth';
 import ForgetPass from './Component/Signup/ForgetPass';
 import Signup from './Component/Signup/Signup';
+import About from './Pages/About/About';
+import Contact from './Pages/Contact/Contact';
+import Shop from './Pages/Shop/Shop';
 
 function App() {
   return (
@@ -28,9 +31,11 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="home" element={<Home />} />
-        <Route path="portfolio" element={<Portfolio/>} />
+        <Route path="about" element={<About/>} />
+        <Route path="shop" element={<Shop/>} />
         <Route path="blog" element={<Blog/>} />
-
+        <Route path="contact" element={<Contact/>} />
+        <Route path="portfolio" element={<Portfolio/>} />
         {/* ========dashboard======= */}
         <Route path="dashboard" 
         element={<RequireAuth><Dashboard/></RequireAuth>}>
