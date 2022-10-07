@@ -1,0 +1,5 @@
+.a-table, .t-th, .t-td {
+    border: 1px solid rgb(200, 198, 198);
+    border-collapse: collapse;
+padding: 10px 10px;
+  }

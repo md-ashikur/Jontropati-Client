@@ -4,7 +4,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { Link, NavLink } from "react-router-dom";
 import auth from "../../firebase.init";
 import { HiOutlineShoppingCart } from "react-icons/hi";
-
+import "./Header.css";
 const Header = () => {
   const [user] = useAuthState(auth);
   const handleSignOut = () => {
@@ -57,21 +57,21 @@ const Header = () => {
         </div>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal p-0">
+        <ul className="menu-horizontal p-0" >
           <li>
-            <NavLink to="home">Home</NavLink>
+            <NavLink to="home"   className="mx-3">Home</NavLink>
           </li>
           <li>
-            <NavLink to="about">About Us</NavLink>
+            <NavLink to="about" className="mx-3">About Us</NavLink>
           </li>
           <li>
-              <NavLink to="shop">Shop</NavLink>
+              <NavLink to="shop" className="mx-3">Shop</NavLink>
             </li>
             <li>
-              <NavLink to="blog">Blog</NavLink>
+              <NavLink to="blog" className="mx-3">Blog</NavLink>
             </li>
             <li>
-              <NavLink to="contact">Conatct Us</NavLink>
+              <NavLink to="contact" className="mx-3">Conatct Us</NavLink>
             </li>
         </ul>
       </div>

@@ -25,9 +25,9 @@ const Home = ({ item }) => {
         Expert Technical Support | High-Performance | Machines Profitable
         Solutions
       </p>
-      <Link to="/shop"><button className="btn glass bg-primary border-none py-3 text-white px-5 shadow-lg hover:bg-white hover:text-primary font-semibold rounded">Shop Now</button></Link>
+      <Link to="/shop"><button className="btn bg-primary border-none py-3 text-white px-5 shadow-lg hover:bg-white hover:text-primary font-semibold rounded">Shop Now</button></Link>
      </div>
-      <img src={heavy} alt="" className="w-full lg:h-screen h-96"/>
+      <img src={heavy} alt="" className="brightness-50 w-full lg:h-screen h-96"/>
       
       <div className=" text-center">
         <h2 className="text-4xl text-primary mt-20 font-bold my-5">Industries We Serve</h2>
