@@ -125,7 +125,7 @@ const Header = () => {
                   <NavLink to="dashboard">Dashboard</NavLink>
                 </li>
                 <li>
-                  <NavLink to="/setting">Setting</NavLink>
+                  <NavLink to="/settings">Setting</NavLink>
                 </li>
                 <li>
                   {user ? (

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Magnifier from "react-magnifier";
-import { Link, NavLink, Outlet } from "react-router-dom";
-import pro1 from "../../../Images/product-6-1-300x310.jpg";
+import {  NavLink, Outlet } from "react-router-dom";
+import pro1 from "../../Images/product-6-1-300x310.jpg";
 import "./ProductDetails.css";
 
 const ProductDetails = () => {

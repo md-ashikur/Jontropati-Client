@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import product6 from "../../Images/product-6-1-300x310.jpg";
 import { BiSearchAlt2 } from "react-icons/bi";
 const Shop = () => {
@@ -22,7 +22,7 @@ const Shop = () => {
               <li className="border-b-2 py-3 border-gray-100 hover:text-secondary">
                 <Link to="">Hand Tools</Link>
               </li>
-              <li className=" py-3 border-gray-100 hover:text-primary">
+              <li className=" py-3 border-gray-100 hover:text-secondary">
                 <Link to="">Power Tools</Link>
               </li>
             </ul>
@@ -59,7 +59,7 @@ const Shop = () => {
           <div className="form-control">
             <div className="input-group">
               <input
-                type="text"
+                type="search"
                 placeholder="Search…"
                 className="input caret-primary ease-in-out w-64 lg:focus:w-96 focus:outline-none transition duration-700 input-bordered"
               />
@@ -104,7 +104,7 @@ const Shop = () => {
                 />
               </div>
 
-              <h3 className="font-bold text-xl">$380.99–$386.89</h3>
+              <h3 className="font-bold text-xl">$380</h3>
               <p className="text-green-500 text-sm font-bold">In Stock</p>
               <p className="my-3">
                 Deserunt recusandae nam quaerat aut mollitia. Similique id
@@ -112,7 +112,6 @@ const Shop = () => {
                 debitis iure non.
               </p>
               <Link to="/productDetails">
-             
                 <button
                   type=""
                   className="bg-red-500 btn glass border-0 hover:bg-primary px-5 py-3 text-white duration-300 ease-in-out rounded font-semibold"
@@ -158,7 +157,7 @@ const Shop = () => {
                 />
               </div>
 
-              <h3 className="font-bold text-xl">$380.99–$386.89</h3>
+              <h3 className="font-bold text-xl">$380</h3>
               <p className="text-green-500 text-sm font-bold">In Stock</p>
               <p className="my-3">
                 Deserunt recusandae nam quaerat aut mollitia. Similique id

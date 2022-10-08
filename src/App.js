@@ -12,7 +12,6 @@ import MakeAdmin from "./Component/MakeAdmin/MakeAdmin";
 import ManageOrders from "./Component/ManageOrders/ManageOrders";
 import ManageProduct from "./Component/Mproduct/ManageProduct";
 import MyOrders from "./Component/MyOrders/MyOrders";
-import MyProfile from "./Component/MyProfile/MyProfile";
 import NotFound from "./Component/NotFound/NotFound";
 import Portfolio from "./Pages/Portfolio/Portfolio";
 import Purchase from "./Component/Purchase/Purchase";
@@ -22,10 +21,11 @@ import Signup from "./Component/Signup/Signup";
 import About from "./Pages/About/About";
 import Contact from "./Pages/Contact/Contact";
 import Shop from "./Pages/Shop/Shop";
-import ProductDetails from "./Pages/Shop/ProductDetails/ProductDetails";
-import Description from "./Pages/Shop/ProductDetails/details/Description";
-import Additional from "./Pages/Shop/ProductDetails/details/Additional";
-import ProductReview from "./Pages/Shop/ProductDetails/details/ProductReview";
+import ProductDetails from "./Pages/ProductDetails/ProductDetails";
+import Description from "./Pages/ProductDetails/details/Description";
+import Additional from "./Pages/ProductDetails/details/Additional";
+import ProductReview from "./Pages/ProductDetails/details/ProductReview";
+import Settings from "./Pages/Settings/Settings";
 
 function App() {
   return (
@@ -64,16 +64,9 @@ function App() {
             </RequireAuth>
           }
         >
+          
           <Route
-            index
-            element={
-              <RequireAuth>
-                <MyProfile />
-              </RequireAuth>
-            }
-          ></Route>
-          <Route
-            path="myOrders"
+          index
             element={
               <RequireAuth>
                 <MyOrders />
@@ -123,6 +116,7 @@ function App() {
           ></Route>
         </Route>
 
+        <Route path="settings" element={<Settings/>} />
         <Route path="login" element={<Login />} />
         <Route path="signup" element={<Signup />} />
         <Route path="forgetPass" element={<ForgetPass />} />
